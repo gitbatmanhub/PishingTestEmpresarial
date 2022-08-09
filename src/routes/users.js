@@ -1,12 +1,12 @@
 const express = require('express');
 const router= express.Router();
 
-router.get('/ingresar', (req, res)=>{
-    res.send("Hello madafaca ingresar");
+router.get('/users/ingresar', (req, res)=>{
+    res.render('users/ingresar');
 })
 
-router.get('/registrarse', (req, res)=>{
-    res.send("Hello madafaca registrarse");
+router.get('/users/registrar', (req, res)=>{
+    res.render("users/registrar");
 })
 
 
