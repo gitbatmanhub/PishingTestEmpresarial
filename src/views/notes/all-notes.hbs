@@ -1,0 +1,22 @@
+<div class="row">
+    {{#each notes}}
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title d-flex justify-content-between align-items-center">
+                        {{titulo}} <a href="#"><i class="bi bi-pencil-square"></i></a>
+                    </h4>
+                    <p>
+                        {{description}}
+                        <button class="btn btn-danger btn-block">Borrar</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="card-body">
+            <p> No hay notas aún </p>
+            <a href="/notes/nueva" class="btn btn-succes btn-block">Crea una</a>
+        </div>
+    {{/each}}
+</div>
