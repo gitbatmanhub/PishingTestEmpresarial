@@ -1,0 +1,20 @@
+<div>
+    <div class="card">
+        <div class="card-header">
+            <h3>Edit note</h3>
+        </div>
+
+        <div class="card-body">
+            <form action="/notes/edit-note/{{note._id}}?_method=PUT" method="post">
+                <input type="hidden" name="_method" value="put">
+                <input name='titulo' type="text" value="{{note.titulo}}">
+
+            <div>
+                <textarea name="description">{{note.description}}</textarea>
+            </div>
+            <button type="submit"> Guardar </button>
+            </form>
+        </div>
+    </div>
+
+</div>
