@@ -1,5 +1,5 @@
 //Esto es un modelo de datos
-
+/*
 const mongoose = require('mongoose');
 const {Schema} = require("mongoose");
 
@@ -9,3 +9,5 @@ const noteScheema= new Schema({
     date: {type: Date, default: Date.now}
 });
 module.exports = mongoose.model('Note', noteScheema);
+
+ */

