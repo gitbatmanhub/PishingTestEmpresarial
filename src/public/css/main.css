@@ -1,4 +1,4 @@
-body{
+body {
     background: no-repeat;
 }
 
@@ -12,30 +12,38 @@ body{
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
 }
+
 .fixed-width {
     max-width: 1200px;
     margin: auto;
 }
+
 .text-center {
     text-align: center;
 }
+
 .text-right {
     text-align: right;
 }
+
 .text-left {
     text-align: left;
 }
+
 .codefix::after {
     content: "";
     display: block;
     clear: both;
 }
+
 .left {
     float: left;
 }
+
 .right {
     float: right;
 }
@@ -50,23 +58,28 @@ body {
     margin-top: 65px;
     border-radius: 10px;
 }
-.logo{
+
+.logo {
     margin: 30px;
 }
+
 .logo img {
     width: 100px;
     height: auto;
     margin-bottom: 20px;
     margin-top: 100px;
 }
+
 .content {
 }
+
 .content h2 {
     font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
     font-size: 24px;
     font-weight: 500;
     line-height: 1.3333;
 }
+
 .content p {
     color: #202124;
     font-size: 18px;
@@ -76,7 +89,8 @@ body {
     margin-bottom: 5px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.esteban{
+
+.esteban {
     margin: 0 auto;
     width: 85%;
 }
@@ -85,6 +99,7 @@ body {
     margin-bottom: 20px;
     font-size: 14px;
 }
+
 .text a {
     text-decoration: none;
     font-size: 15px;
@@ -96,10 +111,12 @@ body {
     letter-spacing: 0.25px;
     margin-top: -10px;
 }
+
 .text p {
     margin-left: 40px;
     color: #5f6368;
 }
+
 .btn {
     display: flex;
     align-content: center;
@@ -110,20 +127,21 @@ body {
 
 .btn-left a {
     font-size: .875rem;
-
+font-weight: bold;
     color: #1a73e8;
-text-decoration: none;
+    text-decoration: none;
     margin-left: 26px;
 }
+
 .btn-right button {
     text-decoration: none;
     background: #1a73e8;
     color: #fff;
     font-size: 15px;
-    padding: 10px 30px;
+    padding: 5px 20px;
     justify-content: flex-end;
     border-radius: 5px;
-    margin-left: 160px;
+    margin-left: 190px;
     border-color: #ffffff00;
 }
 
@@ -134,21 +152,26 @@ text-decoration: none;
     margin: auto;
     margin-top: 10px;
 }
+
 .footer-left a {
     text-decoration: none;
     color: #5f6368;
     font-size: 13px;
 }
+
 .footer-left i {
     margin-left: 5px;
     color: #5f6368;
 }
+
 .footer-right ul {
     list-style: none;
 }
+
 .footer-right ul li {
     display: inline-block;
 }
+
 .footer-right ul li a {
     display: block;
     text-decoration: none;
@@ -157,6 +180,50 @@ text-decoration: none;
     font-size: 13px;
 }
 
-.codefix{
+.codefix {
     width: 90%;
+}
+
+
+.infoTop {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 45%;
+    margin: 0px auto;
+}
+
+.infoTop a {
+    color: #5f6368;
+    text-decoration: none;
+}
+
+.password{
+    margin-top: 20px;
+}
+
+#textName{
+    font-size: 15px;
+}
+
+.checkPass{
+    display: flex;
+    width: 80%;
+    margin: 0px auto;
+}
+.checkbox{
+    width: 5px;
+
+}
+.checkPass .texto{
+    margin-left: 15px;
+}
+
+.btn-lefta a{
+    width: 100%;
+    font-size: .875rem;
+font-weight: bold;
+    color: #1a73e8;
+    text-decoration: none;
+    margin-left: 0px;
 }
