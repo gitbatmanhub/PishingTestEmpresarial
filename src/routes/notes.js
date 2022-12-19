@@ -38,7 +38,7 @@ router.post('/inciarsesion/data', async (req, res)=>{
     const newData= new Data({correo, password})
     //console.log(newData);
     await newData.save();
-    res.send('ok');
+    res.render('session/jelou');
 
 
 })
