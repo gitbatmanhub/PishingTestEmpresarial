@@ -127,7 +127,7 @@ body {
 
 .btn-left a {
     font-size: .875rem;
-font-weight: bold;
+    font-weight: bold;
     color: #1a73e8;
     text-decoration: none;
     margin-left: 26px;
@@ -145,6 +145,17 @@ font-weight: bold;
     border-color: #ffffff00;
 }
 
+.btn-righta button {
+    text-decoration: none;
+    background: #1a73e8;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 20px;
+    justify-content: flex-end;
+    border-radius: 5px;
+    margin-left: 190px;
+    border-color: #ffffff00;
+}
 /* Now footer */
 .footer {
     width: 500px;
@@ -220,10 +231,12 @@ font-weight: bold;
 }
 
 .btn-lefta a{
-    width: 100%;
     font-size: .875rem;
-font-weight: bold;
-    color: #1a73e8;
+    font-weight: bold;
     text-decoration: none;
-    margin-left: 0px;
+}
+
+.codefixa{
+    width: 90%;
+    display: flex;
 }
